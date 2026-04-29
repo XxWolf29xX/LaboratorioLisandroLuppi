@@ -1,0 +1,67 @@
+<div class="overlay">
+  <div class="card">
+    <button class="close-btn" (click)="cerrar()">X</button>
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+      <h1 class="title">Extracción de sangre a domicilio</h1>
+      <p class="subtitle">Llene los campos con la información requerida y se enviará su solicitud vía WhatsApp</p>
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="nombre" class="form-label">
+          <span class="form-text">Nombre y Apellido:</span>
+        </label>
+        <input
+          type="text"
+          id="nombre"
+          class="form-control"
+          placeholder="ej: Leandro Gimenez"
+          formControlName="nombre"
+        >
+        @if (formUtils.FieldIsInvalid(createForm, 'nombre')) {
+          <div class="invalid-feedback">
+            {{formUtils.getFieldError(createForm, 'nombre')}}
+          </div>
+        }
+      </div>
+      <!-- DNI Field -->
+      <div class="form-group">
+        <label for="dni" class="form-label">
+          <span class="form-text">Nro de Documento (DNI):</span>
+        </label>
+        <input
+          type="text"
+          id="dni"
+          class="form-control"
+          placeholder="ej: 38753223"
+          formControlName="dni"
+        >
+        @if (formUtils.FieldIsInvalid(createForm, "dni")) {
+          <div class="invalid-feedback">
+            {{formUtils.getFieldError(createForm, "dni")}}
+          </div>
+        }
+      </div>
+      <!-- Direction Field -->
+      <div class="form-group">
+        <label for="direccion" class="form-label">
+          <span class="form-text">Dirección de domicilio:</span>
+        </label>
+        <input
+          type="text"
+          id="direccion"
+          class="form-control"
+          placeholder="ej: Lavalle 321"
+          formControlName="direccion"
+        >
+        @if (formUtils.FieldIsInvalid(createForm, "direccion")) {
+          <div class="invalid-feedback">
+            {{formUtils.getFieldError(createForm, "direccion")}}
+          </div>
+        }
+      </div>
+      <div class="form-btns">
+        <button type="button" class="cancel-btn btn btn-secondary mt-4 w-full" (click)="cerrar()">Cancelar</button>
+        <button type="submit" class="create-btn btn btn-secondary mt-4 w-full">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>

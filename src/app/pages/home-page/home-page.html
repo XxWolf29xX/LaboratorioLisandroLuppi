@@ -1,0 +1,28 @@
+<main class="main-contain">
+
+  <header class="header">
+    <app-navbar></app-navbar>
+  </header>
+
+  <div class="main-body">
+    <div class="contacts-contain">
+      <div class="whatsapp-contain">
+        <img class="whatsapp-image" src="assets/images/WhatsAppImage.png" alt="">
+        <a class="contact1-btn btn btn-primary" [href]="whatsAppLink" target="_blank" rel="noopener noreferrer">Chatear ahora</a>
+      </div>
+      <div class="instagram-contain">
+        <img class="instagram-image" src="assets/images/InstagramImage.png" alt="">
+        <a class="contact2-btn btn btn-primary" [href]="instagramLink" target="_blank" rel="noopener noreferrer">Seguinos ahora</a>
+      </div>
+    </div>
+    <div class="extraccion-form">
+      <img class="extraccion-image" src="assets/images/FormBackgroundImage.png" alt="">
+      <button class="form-btn btn btn-primary" (click)="abrirForm()">Realizar Petición</button>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <app-footer></app-footer>
+  </footer>
+</main>
+<app-extraccion-domicilio-form *ngIf="mostrarForm" (close)="cerrarForm()"></app-extraccion-domicilio-form>
