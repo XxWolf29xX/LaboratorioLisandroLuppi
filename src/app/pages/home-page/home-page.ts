@@ -12,7 +12,7 @@ import { NgIf } from '@angular/common';
   styleUrl: './home-page.scss',
 })
 export class HomePage {
-  phoneNumber = 5493364366974;
+  // phoneNumber = 5493364366974;
   whatsAppLink = `https://api.whatsapp.com/send?phone=${this.phoneNumber}`;
   instagramLink = "https://www.instagram.com/laboratoriolisandroluppi?igsh=MjR5Mm9neTJ1c3A4";
   mostrarForm = false;

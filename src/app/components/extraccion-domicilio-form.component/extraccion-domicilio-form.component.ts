@@ -13,7 +13,7 @@ import { Message } from '../../services/message.service';
 export class ExtraccionDomicilioFormComponent implements OnInit{
   private fb = inject(FormBuilder);
   private messageService = inject(Message)
-  phoneNumber = "5493364366974"; //549 --> debe estar en formato internacional (54 --> arg, 9 --> movil)
+  // phoneNumber = "5493364366974"; //549 --> debe estar en formato internacional (54 --> arg, 9 --> movil)
   formUtils = FormUtils;
 
   @Output() close = new EventEmitter<void>();
