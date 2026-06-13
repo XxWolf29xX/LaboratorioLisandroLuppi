@@ -1,28 +1,66 @@
-<main class="main-contain">
+<div class="main-contain">
 
   <header class="header">
     <app-navbar></app-navbar>
   </header>
 
-  <div class="main-body">
-    <div class="contacts-contain">
-      <div class="whatsapp-contain">
-        <img class="whatsapp-image" src="assets/images/WhatsAppImage.png" alt="">
-        <a class="contact1-btn btn btn-primary" [href]="whatsAppLink" target="_blank" rel="noopener noreferrer">Chatear ahora</a>
+  <main class="main-body">
+    <div class="presentation-container">
+      <div class="presentation-info">
+        <h1>{{"¿Quienes somos?"}}</h1>
+        <p>{{"Laboratorio Lisandro Luppi, somos un laboratorio médico especializado en análisis clínicos con sede en San Nicolás de los Arroyos de la provincia de Buenos Aires, ubicado en calle Pellegrini 440."}}</p>
       </div>
-      <div class="instagram-contain">
-        <img class="instagram-image" src="assets/images/InstagramImage.png" alt="">
-        <a class="contact2-btn btn btn-primary" [href]="instagramLink" target="_blank" rel="noopener noreferrer">Seguinos ahora</a>
+      <div class="presentation-info2">
+        <h1>{{"¡Aceptamos todas las obras sociales!"}}</h1>
       </div>
     </div>
     <div class="extraccion-form">
-      <img class="extraccion-image" src="assets/images/FormBackgroundImage.png" alt="">
-      <button class="form-btn btn btn-primary" (click)="abrirForm()">Realizar Petición</button>
+      <div class="form-presentation">
+        <h1 class="presentation-title">{{"Extracciones de" | uppercase}}</h1>
+        <div class="title-contain">
+          <h1 class="presentation-title2">{{"sangre" | uppercase}}</h1>
+          <h1 class="presentation-title3">{{"a domicilio" | uppercase}}</h1>
+        </div>
+        <p class="form-text">{{"Realizá tu solicitud para una extracción de sangre a domicilio completando el siguiente formulario"}}</p>
+        <button class="form-btn btn btn-primary" (click)="abrirForm()">{{"Realizar Petición"}}</button>
+      </div>
+      <div class="form-instructions">
+        <div class="instruction-contain">
+          <p class="instruction-number">1</p>
+          <div class="instruction-icon">
+            <i class="fa fa-clipboard-list"></i>
+          </div>
+          <div class="instruction-block">
+            <h2 class="instruction-1">{{"Completá el formulario"}}</h2>
+            <p class="instruction-2">{{"Ingresá tus datos y los detalles de la extracción"}}</p>
+          </div>
+        </div>
+        <div class="instruction-contain">
+          <p class="instruction-number">2</p>
+          <div class="instruction-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="instruction-block">
+            <h2 class="instruction-1">{{"Se abre WhatsApp automáticamente"}}</h2>
+            <p class="instruction-2">{{"Serás redirigido a WhatsApp al finalizar"}}</p>
+          </div>
+        </div>
+        <div class="instruction-contain">
+          <p class="instruction-number">3</p>
+          <div class="instruction-icon">
+            <i class="fa-regular fa-paper-plane"></i>
+          </div>
+          <div class="instruction-block">
+            <h2 class="instruction-1">{{"El mensaje ya está listo para enviar"}}</h2>
+            <p class="instruction-2">{{"Solo revisá la información y enviá tu solicitud"}}</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
 
   <footer class="main-footer">
     <app-footer></app-footer>
   </footer>
-</main>
+</div>
 <app-extraccion-domicilio-form *ngIf="mostrarForm" (close)="cerrarForm()"></app-extraccion-domicilio-form>

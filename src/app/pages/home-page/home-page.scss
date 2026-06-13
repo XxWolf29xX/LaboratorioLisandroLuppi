@@ -1,8 +1,11 @@
 .main-contain {
-  background-image: url('/assets/images/BackgroundImage.png');
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-image: url('/assets/images/BackgroundImage.webp');
+  background-repeat: repeat;
   background-size: cover;
-  min-width: 520px;
+  min-width: 845px;
+  min-height: 100vh;
 }
 
 .header {
@@ -12,85 +15,217 @@
 }
 
 .main-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   width: 100%;
-  height: 100%;
-  // min-height: 600px;
-  .contacts-contain {
-    // background-color: black;
+
+  // .contacts-contain {
+  //   display: flex;
+  //   flex-direction: row;
+  //   padding: 20px;
+  //   width: 100%;
+  //   margin-top: 10px;
+  //   gap: 10%;
+  //   .whatsapp-contain {
+  //     position: relative;
+  //     width: 40%;
+  //     height: 40%;
+  //     .whatsapp-image {
+  //       border-radius: 42px;
+  //       display: block;
+  //     }
+  //     .contact1-btn {
+  //       position: absolute;
+  //       color: rgb(22, 82, 46);
+  //       background-color: white;
+  //       font-size: 1.8vw;
+  //       border-radius: 1.6vw;
+  //       border-color: transparent;
+  //       width: 50%;
+  //       height: 20%;
+  //       bottom: 10%;
+  //       left: 43%;
+  //     }
+  //   }
+  //   .instagram-contain {
+  //     position: relative;
+  //     width: 40%;
+  //     height: 40%;
+  //     .instagram-image {
+  //       background-color: white;
+  //       // padding: 10px;
+  //       border-radius: 42px;
+  //       display: block;
+  //     }
+  //     .contact2-btn {
+  //       position: absolute;
+  //       color: rgb(29, 28, 28);
+  //       background-color: white;
+  //       font-size: 1.8vw;
+  //       border-radius: 1.6vw;
+  //       border: 2px solid black;
+  //       width: 55%;
+  //       height: 20%;
+  //       bottom: 10%;
+  //       left: 43%;
+  //     }
+  //   }
+  // }
+
+  .presentation-container {
     display: flex;
     flex-direction: row;
-    padding: 20px;
-    width: 100%;
-    margin-top: 10px;
-    gap: 10%;
-    .whatsapp-contain {
-      position: relative;
-      width: 40%;
-      height: 40%;
-      .whatsapp-image {
-        border-radius: 42px;
-        display: block;
-      }
-      .contact1-btn {
-        position: absolute;
-        color: rgb(22, 82, 46);
-        background-color: white;
-        font-size: 1.8vw;
-        border-radius: 1.6vw;
-        border-color: transparent;
-        width: 50%;
-        height: 20%;
-        bottom: 10%;
-        left: 43%;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px 0px 30px 0px;
+    // background-color: red;
+    @media(min-width: 1226px) {
+
+    }
+    width: 80%;
+    .presentation-info {
+      align-self: center;
+      padding: 10px;
+      font-size: large;
+      font-weight: 600;
+      font-style: normal;
+      color: rgb(11, 60, 140);
+      background-color: white;
+      h1 {
+        padding-bottom: 20px;
+        font-size: xx-large;
       }
     }
-    .instagram-contain {
-      position: relative;
-      width: 40%;
-      height: 40%;
-      .instagram-image {
-        background-color: white;
-        // padding: 10px;
-        border-radius: 42px;
-        display: block;
+    .presentation-info2 {
+      align-self: center;
+      width: auto;
+      border-radius: 22px;
+      padding: 10px;
+      font-size: x-large;
+      font-weight: 700;
+      font-style: normal;
+      color: white;
+      background-color: rgb(11, 60, 140);
+    }
+    @media(min-width: 1226px){
+      .presentation-info {
+        width: 30%;
       }
-      .contact2-btn {
-        position: absolute;
-        color: rgb(29, 28, 28);
-        background-color: white;
-        font-size: 1.8vw;
-        border-radius: 1.6vw;
-        border: 2px solid black;
-        width: 55%;
-        height: 20%;
-        bottom: 10%;
-        left: 43%;
+    }
+    @media(max-width: 1226px){
+      .presentation-info {
+        width: 300px;
+      }
+      .presentation-info2 {
+        width: 240px;
       }
     }
   }
+
   .extraccion-form {
     position: relative;
     display: flex;
-    justify-content: center;
-    padding: 20px;
-    width: 100%;
-    .extraccion-image {
-      align-self: center;
-      border-radius: 32px;
-      width: 70%;
+    flex-direction: row;
+    padding: 30px;
+    margin: 20px;
+    gap: 40px;
+    width: 800px;
+    height: 420px;
+    border: 1px;
+    border-radius: 30px;
+    border-style: outset;
+    background-color: white;
+    .form-presentation {
+      width: 60%;
+      .presentation-title {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: x-large;
+        font-weight: 700;
+        color: rgb(11, 60, 140);
+        margin-bottom: 0;
+      }
+      .title-contain {
+        display: flex;
+        flex-direction: row;
+        gap: 7px;
+        padding-bottom: 10px;
+        padding-top: 0px;
+        border-bottom: solid 3px cyan;
+        font-size: xx-large;
+        font-weight: 500;
+        .presentation-title2 {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: rgb(11, 60, 140);
+        }
+        .presentation-title3 {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: rgb(49, 189, 216);
+        }
+      }
+      .form-text {
+        width: 300px;
+        height: auto;
+        margin-top: 20px;
+        font-weight: 400;
+        color: rgb(11, 60, 140);
+      }
     }
+    .form-instructions {
+      .instruction-contain {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        .instruction-number {
+          align-self: flex-start;
+          margin-top: 10px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: rgb(49, 189, 216);
+          width: 45px;
+          height: 30px;
+          font-size: larger;
+          font-weight: 600;
+          color: aliceblue;
+        }
+        .instruction-icon {
+          border: 1px;
+          border-radius: 50%;
+          border-style: ridge;
+          padding: 10px;
+          align-self: flex-start;
+          align-content: center;
+          color: rgb(11, 60, 140);
+          font-size: xx-large;
+        }
+        .instruction-block {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 40px;
+          .instruction-1{
+            font-size: large;
+            font-weight: 700;
+            color: rgb(11, 60, 140);
+          }
+          .instruction-2 {
+            font-weight: 400;
+            color: rgb(11, 60, 140);
+          }
+        }
+      }
+    }
+
     .form-btn {
-      position: absolute;
-      font-size: 2vw;
-      border-radius: 1.2vw;
+      position: relative;
+      font-size: xx-large;
+      border-radius: 20px;
+      margin-top: 70px;
+      padding: 30px;
       border-color: rgb(1, 84, 237);
       background-color: rgb(1, 84, 237);
       border-style: outset;
-      bottom: 23%;
-      left: 20%;
-      height: 12%;
-      width: 22%;
     }
   }
 }
