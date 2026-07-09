@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     pathMatch: 'full',
     loadChildren: () => import('./pages/pages.routes'),
   },
