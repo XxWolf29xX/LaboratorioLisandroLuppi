@@ -6,8 +6,4 @@ export const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () => import('./pages/pages.routes'),
   },
-  {
-    path: '**',
-    redirectTo: 'home'
-  }
 ];
