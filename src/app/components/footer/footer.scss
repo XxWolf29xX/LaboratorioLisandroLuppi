@@ -1,21 +1,32 @@
-.contact-info{
-  height: 100%;
-  width: 100%;
+.footer-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px 30px 0px 30px;
-  justify-content: space-between;
-  @media(min-width: 1080px){
+  flex-direction: column;
+  .copyright {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    color: black;
+    font-size: large;
+    padding: 5px;
+  }
+  .contact-info{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 30px 0px 30px;
     gap: 180px;
+    justify-content: center;
+    @media(max-width: 845px){
+      justify-content: center;
+      gap: 10px;
+    }
   }
 }
-
 .contact {
   display: flex;
   flex-direction: row;
   color: black;
-  font-size: 1.5vw;
+  font-size: large;
   padding: 5px;
 }

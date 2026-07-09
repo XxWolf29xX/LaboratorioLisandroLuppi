@@ -3,18 +3,19 @@ import { ButtonModule } from 'primeng/button';
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer/footer";
 import { ExtraccionDomicilioFormComponent } from '../../components/extraccion-domicilio-form.component/extraccion-domicilio-form.component';
-import { NgIf } from '@angular/common';
+import { NgIf, UpperCasePipe } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home-page',
-  imports: [ButtonModule, Navbar, Footer, ExtraccionDomicilioFormComponent, NgIf],
+  imports: [ButtonModule, Navbar, Footer, ExtraccionDomicilioFormComponent, NgIf, UpperCasePipe],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss',
 })
 export class HomePage {
-  // phoneNumber = 5493364366974;
+  phoneNumber = environment.phoneNumber;
   whatsAppLink = `https://api.whatsapp.com/send?phone=${this.phoneNumber}`;
-  instagramLink = "https://www.instagram.com/laboratoriolisandroluppi?igsh=MjR5Mm9neTJ1c3A4";
+  instagramLink = environment.instagramLink;
   mostrarForm = false;
 
   abrirForm(){

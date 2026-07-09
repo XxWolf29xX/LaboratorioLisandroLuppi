@@ -10,24 +10,20 @@ import { Message } from '../../services/message.service';
   templateUrl: './extraccion-domicilio-form.component.html',
   styleUrl: './extraccion-domicilio-form.component.scss',
 })
-export class ExtraccionDomicilioFormComponent implements OnInit{
+export class ExtraccionDomicilioFormComponent {
   private fb = inject(FormBuilder);
   private messageService = inject(Message)
-  // phoneNumber = "5493364366974"; //549 --> debe estar en formato internacional (54 --> arg, 9 --> movil)
+  phoneNumber = "5493364366974"; //549 --> debe estar en formato internacional (54 --> arg, 9 --> movil)
   formUtils = FormUtils;
 
   @Output() close = new EventEmitter<void>();
 
   createForm = this.fb.group({
     nombre: ['', [Validators.required]],
-    dni: ['',[Validators.required]],
-    direccion: ['', [Validators.required]],
+    dni: ['',[Validators.required, this.formUtils.dniValidator]],
+    direccion: ['', [Validators.required, this.formUtils.direccionValidator]],
     obraSocial: ['']
   })
-
-  ngOnInit() {
-    console.log("render");
-  }
 
   onSubmit() {
     if (this.createForm.invalid) {

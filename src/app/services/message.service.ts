@@ -5,7 +5,14 @@ import { WhatsAppMessage } from '../interfaces/whatsappmessage.interface';
   providedIn: 'root',
 })
 export class Message {
-  
+
+  defaultWhatsAppMessage(): string {
+    const message = `Hola, buen día.
+    quisiera hacer una consulta sobre los servicios del laboratorio.`;
+    const encodedMessage = encodeURIComponent(message);
+    return encodedMessage;
+  }
+
   createWhatsAppMessage(createDto: WhatsAppMessage): string {
     if (createDto.obraSocial == null || createDto.obraSocial == '') {
       const message = `Hola, buen día.

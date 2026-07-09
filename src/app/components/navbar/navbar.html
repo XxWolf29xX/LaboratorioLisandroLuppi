@@ -1,30 +1,28 @@
-<!-- <div class="navbar bg-base-100 shadow-sm">
-  <a class="btn btn-ghost text-xl">daisyUI</a>
-</div> -->
 <div class="navbar">
-  <!-- <div class="flex-logo">
-    <img src="assets/images/LogoLaboratorio.jpg" class="image-logo" alt="" width="120" height="195">
+  <div class="flex-logo">
+    <img src="assets/images/LogoLaboratorio.webp" class="image-logo" alt="" width="120" height="195">
     <div class="flex-logoinfo">
-      <h1 class="title">Laboratorio</h1>
-      <h1 class="title">Lisandro Luppi</h1>
+      <h1 class="title">{{"Laboratorio"}}</h1>
+      <h1 class="title">{{"Lisandro Luppi"}}</h1>
     </div>
-  </div> -->
-  <img class="banner" src="assets/images/HomeCoverImage2.png" alt="">
+  </div>
+  <div class="contact-container">
+    <h1 class="title">{{"Información de contacto (links)"}}</h1>
     <div class="contact-info">
       <div class="contact">
         <a class="pi pi-whatsapp" routerLink="/redirect-page" target="_blank" rel="noopener noreferrer" (click)="abrirWhatsApp()"></a>
         <a class="nav-text ml-2" [href]="whatsAppLink" target="_blank" rel="noopener noreferrer">+54 9 3364366974</a>
       </div>
       <div class="contact">
-        <a class="pi pi-instagram" href="https://www.instagram.com/laboratoriolisandroluppi?igsh=MjR5Mm9neTJ1c3A4" target="_blank" rel="noopener noreferrer"></a>
-        <a class="nav-text ml-2" href="https://www.instagram.com/laboratoriolisandroluppi?igsh=MjR5Mm9neTJ1c3A4" target="_blank" rel="noopener noreferrer">laboratoriolisandroluppi </a>
+        <a class="pi pi-instagram" [href]="instagramLink" target="_blank" rel="noopener noreferrer"></a>
+        <a class="nav-text ml-2" [href]="instagramLink" target="_blank" rel="noopener noreferrer">laboratoriolisandroluppi </a>
       </div>
       <div class="contact">
-        <a class="pi pi-map-marker" href="https://www.google.com/maps/place/Pellegrini+440,+C2900+San+Nicol%C3%A1s+de+Los+Arroyos,+Provincia+de+Buenos+Aires/@-33.3360193,-60.2212779,16.75z/data=!4m6!3m5!1s0x95b7678f8930476b:0x48ccac6ac39130db!8m2!3d-33.3368077!4d-60.2207168!16s%2Fg%2F11mp1hph4v?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+        <a class="pi pi-map-marker" [href]="googleMapsLink"
           target="_blank" rel="noopener noreferrer"></a>
-        <a class="nav-text ml-2" href="https://www.google.com/maps/place/Pellegrini+440,+C2900+San+Nicol%C3%A1s+de+Los+Arroyos,+Provincia+de+Buenos+Aires/@-33.3360193,-60.2212779,16.75z/data=!4m6!3m5!1s0x95b7678f8930476b:0x48ccac6ac39130db!8m2!3d-33.3368077!4d-60.2207168!16s%2Fg%2F11mp1hph4v?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+        <a class="nav-text ml-2" [href]="googleMapsLink"
           target="_blank" rel="noopener noreferrer">Pellegrini 440</a>
       </div>
-  <!-- </div> -->
+    </div>
+  </div>
 </div>
-<i class="fa-solid fa-location-dot"></i>
