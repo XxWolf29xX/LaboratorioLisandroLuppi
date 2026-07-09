@@ -12,8 +12,10 @@ $ins-maps: linear-gradient(45deg, #4285F4, #EA4335, #FBBC04, #34A853);
   margin: 0;
   padding: 0;
   background-color: rgb(1, 26, 68);
-  // background-color: rgb(245, 245, 245);
   border-bottom: solid 2px rgb(39, 38, 38);
+  @media(max-width: 845px){
+    height: 100px;
+  }
 }
 
 .flex-logo{
@@ -23,43 +25,89 @@ $ins-maps: linear-gradient(45deg, #4285F4, #EA4335, #FBBC04, #34A853);
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
-  .image-logo {
-    margin-right: 15px;
-    border-radius: 60px;
-  }
-  .flex-logoinfo {
-    display: flex;
-    flex-direction: column;
-    .title {
-      color: white;
-      // color: rgb(85, 85, 85);
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 600;
+  @media(min-width: 845px){
+    .flex-logoinfo {
+      display: flex;
+      flex-direction: column;
+      .title {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+      }
+    }
+    .image-logo {
+      margin-right: 15px;
+      border-radius: 60px;
     }
   }
+  @media(max-width:845px) {
+    .image-logo {
+      height: 80px;
+      width: 80px;
+      margin-right: 15px;
+      border-radius: 60px;
+    }
+    .flex-logoinfo {
+      display: none;
+    }
+  }
+
 }
 
 .contact-container {
-  // background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 60px;
   gap: 30px;
+  @media(max-width: 845px) {
+    gap: 10px;
+  }
   .title {
     color: white;
-    // color: rgb(85, 85, 85);
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
+    @media(max-width: 845px) {
+      font-size: larger;
+    }
   }
   .contact-info {
-    // background-color: yellow;
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 4px;
     border-radius: 22px;
+    @media(max-width: 845px) {
+      width: 100%;
+      font-size: 30px;
+      gap: 40px;
+      padding: 0;
+      .pi-whatsapp {
+        // aplico el gradient al fondo
+        background: $whatsapp-green;
+        // Color del icono
+        color: white;
+        border-radius: 50%;
+      }
+      .pi-instagram {
+        // aplico el gradient al fondo
+        background: $ins-gradient;
+        // Color del icono
+        color: white;
+        border-radius: 50%;
+      }
+      .pi-map-marker {
+        // aplico el gradient al fondo
+        background: $ins-maps;
+        // Para que el gradient se vea solo en la forma del icono/texto
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: white;
+        border-radius: 100%;
+      }
+    }
     @media(min-width: 1126px) {
       width: 100%;
       font-size: 20px;
@@ -94,7 +142,7 @@ $ins-maps: linear-gradient(45deg, #4285F4, #EA4335, #FBBC04, #34A853);
         color: transparent;
       }
     }
-    @media(max-width: 1126px){
+    @media(845px <= width <= 1126px){
       width: 100%;
       font-size: 40px;
       gap: 45px;

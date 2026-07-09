@@ -4,8 +4,8 @@
   background-image: url('/assets/images/BackgroundImage.webp');
   background-repeat: repeat;
   background-size: cover;
-  min-width: 845px;
   min-height: 100vh;
+  min-width: 600px;
 }
 
 .header {
@@ -22,68 +22,15 @@
   position: relative;
   width: 100%;
 
-  // .contacts-contain {
-  //   display: flex;
-  //   flex-direction: row;
-  //   padding: 20px;
-  //   width: 100%;
-  //   margin-top: 10px;
-  //   gap: 10%;
-  //   .whatsapp-contain {
-  //     position: relative;
-  //     width: 40%;
-  //     height: 40%;
-  //     .whatsapp-image {
-  //       border-radius: 42px;
-  //       display: block;
-  //     }
-  //     .contact1-btn {
-  //       position: absolute;
-  //       color: rgb(22, 82, 46);
-  //       background-color: white;
-  //       font-size: 1.8vw;
-  //       border-radius: 1.6vw;
-  //       border-color: transparent;
-  //       width: 50%;
-  //       height: 20%;
-  //       bottom: 10%;
-  //       left: 43%;
-  //     }
-  //   }
-  //   .instagram-contain {
-  //     position: relative;
-  //     width: 40%;
-  //     height: 40%;
-  //     .instagram-image {
-  //       background-color: white;
-  //       // padding: 10px;
-  //       border-radius: 42px;
-  //       display: block;
-  //     }
-  //     .contact2-btn {
-  //       position: absolute;
-  //       color: rgb(29, 28, 28);
-  //       background-color: white;
-  //       font-size: 1.8vw;
-  //       border-radius: 1.6vw;
-  //       border: 2px solid black;
-  //       width: 55%;
-  //       height: 20%;
-  //       bottom: 10%;
-  //       left: 43%;
-  //     }
-  //   }
-  // }
-
   .presentation-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 100px;
     margin: 50px 0px 30px 0px;
-    // background-color: red;
-    @media(min-width: 1226px) {
-
+    @media(max-width: 740px) {
+      display: flex;
+      flex-direction: column;
     }
     width: 80%;
     .presentation-info {
@@ -138,8 +85,16 @@
     border-radius: 30px;
     border-style: outset;
     background-color: white;
+    @media(max-width: 845px){
+      flex-direction: column;
+      width: 450px;
+      height: auto;
+    }
     .form-presentation {
       width: 60%;
+      @media(max-width: 845px) {
+        width: auto;
+      }
       .presentation-title {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: x-large;
@@ -226,6 +181,9 @@
       border-color: rgb(1, 84, 237);
       background-color: rgb(1, 84, 237);
       border-style: outset;
+      @media(max-width: 845px) {
+        margin-top: 30px;
+      }
     }
   }
 }
